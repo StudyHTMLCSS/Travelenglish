@@ -20,13 +20,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'  # 👈 Изменили на npm
+          cache: 'npm'  # 👈 npm вместо pnpm
 
       - name: Install dependencies
         run: npm install  # 👈 npm вместо pnpm
 
       - name: Build
-        run: npm run build  # 👈 npm вместо pnpm
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
